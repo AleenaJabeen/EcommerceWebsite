@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-items {
+    margin: 1rem 3rem;
+}
+
+.cart-items img {
+    height: 10rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 0.5rem;
+    background-color: #f4f4f4;
+}
+
+td {
+    height: auto;
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.productImg {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.details {
+    text-align: left;
+}
+
+.quantity {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.plus {
+    padding: 0.25rem 0.55rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.minus {
+    padding: 0.25rem 0.65rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.subtotal{
+    margin: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.heading{
+    text-align: center;
+    font-size: 1.75rem;
+}
+.subtotal h2{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.CheckBtn{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.CheckBtn button{
+    width: 17rem;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+  border-radius: 40px;
+  
+}
+
+
+@media (max-width:768px){
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    th {
+        display: none;
+    }
+    tr {
+        margin-bottom: 1rem;
+    }
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border: none;
+    }
+    .productImg {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .productImg img {
+        width: 100%;
+        height: auto;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .quantity, .plus, .minus {
+        font-size: 1.2rem;
+    }
+    .plus, .minus {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    .subtotal{
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+}

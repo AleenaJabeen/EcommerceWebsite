@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Fashion</title>
+    <link rel="stylesheet" href="/css/WomensFashion.css">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+</head>
+<body>
+    <!--Header section-->
+    <div id="header">
+    </div>
+     <!--Cart Section-->
+     <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut"><a href="ShoppingCart.html">View Cart</a></button>
+        </div>
+      </div>
+
+    <!--SubCategories Section-->
+    <section>
+        <div class="subcategoryContainer">
+            <div class="categoryName">
+                <h2 id="categoryOrSubcategory">Men</h2>
+            </div>
+            <div class="wrapper">
+            <div class="subcategory">
+                <img src="../Men'sFashion Images/k1.webp" alt="">
+                <a href="Kurtas.html "><p>Kurtas</p></a>
+            </div>
+            <div class="subcategory">
+                <img src="../Men'sFashion Images/W1.webp" alt="">
+                <a href="WaistCoats.html"><p>WaistCoats</p></a>
+            </div>
+            <div class="subcategory">
+                <img src="../Men'sFashion Images/B1.webp" alt="">
+               <a href="Bottoms.html"><p>Bottoms</p></a> 
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--Display design Section-->
+    <section>
+        <div class="displayDesign">
+            <div class="menu">
+              <a href="index.html">Home</a> > Men's Fashion
+            </div>
+            <div class="display">
+                <div class="Box box1"  onclick="setDisplay(2)"><div class="boxes box2"></div><div class="boxes"></div></div>
+                <div class="Box box2"  onclick="setDisplay(3)"><div class="boxes"></div><div class="boxes"></div><div class="boxes"></div></div>
+                <div class="Box box3"  onclick="setDisplay(4)"><div class="boxes box2"></div><div class="boxes box2"></div><div class="boxes"></div><div class="boxes"></div>
+            </div>
+        </div>
+    </section>
+    <!--Filtered feature and sort by-->
+    <section>
+        <div class="filterContainer">
+        <div class="filter">
+            <i class="fa-solid fa-filter"></i>
+            <p>Filter</p>
+
+        </div>
+        <div class="SortBy">
+            <select name="featured" id="sortOptions">
+                <option value="Featured">Featured</option>
+                <option value="az">Alphapetically, A-Z</option>
+                <option value="za">Alphapetically, Z-A</option>
+                <option value="low-high">Price, Low-High</option>
+                <option value="high-low">Price,High-Low </option>
+            </select>
+        </div>
+    </div>
+    </section>
+<!--All Products-->
+<section>
+    <div class="products" id="productContainer">
+        
+    </div>
+</section>
+ <!--Footer Section-->
+ <div id="footer">
+</div>
+
+<!--Script files-->
+<script src="/js/View.js"></script>
+<script type="module" src="/js/common.js"></script>
+</body>
+</html>
