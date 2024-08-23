@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       searchButton.addEventListener("click", () => {
         const searchTerm = document.getElementById("searchInput").value;
         if (searchTerm) {
-          window.location.href = `SearchProductPage.html?query=${encodeURIComponent(searchTerm)}`;
+          window.location.href = `/html/SearchProductPage.html?query=${encodeURIComponent(searchTerm)}`;
         }
       });
     }
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (product) {
         card.innerHTML = `
           <img src="${product.image}" alt="${subcategory}">
-          <h3><a href="${subcategory.split(" ").join("")}.html">${subcategory}</a></h3>`;
+          <h3><a href="html/${subcategory.split(" ").join("")}.html">${subcategory}</a></h3>`;
         subcategoryContainer.appendChild(card);
       }
     });
