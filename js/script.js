@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Slider Logic
 const SliderImages = [
-  "../images/img1.png",
-  "../images/img2.PNG",
-  "../images/img3.PNG",
+  "/images/img1.png",
+  "/images/img2.PNG",
+  "/images/img3.PNG",
 ];
 //accessing btns and image
 const prevBtn = document.getElementById("prev");
