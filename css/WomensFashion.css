@@ -256,14 +256,10 @@ body.showCart .container{
     margin: 0.25rem 0;
     padding: 0.5rem;
     border: none;
-    transition: width 0.5s linear, all 0.5s ease-in;
     font-size: 1rem;
-    display: none;
     opacity: 0;
 }
 .product:hover button{
-    transform: scale(1.1);
-        display: inline;
         opacity: 1;
     
 }
@@ -342,6 +338,15 @@ body.showCart .container{
     gap:5px;
             grid-template-columns: 55px 100px 45px 1fr;
            
+        }
+        .product button{
+            background-color: black;
+            color: white;
+            margin: 0.25rem 0;
+            padding: 0.5rem;
+            border: none;
+            display: block;
+            font-size: 1rem; 
         }
 
 }
