@@ -39,33 +39,55 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//Slider Logic
-const SliderImages = [
-  "/images/img1.png",
-  "/images/img2.png",
-  "/images/img3.PNG",
+// Define images for desktop and mobile
+const SliderImagesDesktop = [
+  "/images/desktop-img1.webp",
+  "/images/desktop-img2.png",
+  "/images/desktop-img3.png",
 ];
-//accessing btns and image
+const SliderImagesMobile = [
+  "/images/mobile-img1.webp",
+  "/images/mobile-img2.webp",
+  "/images/mobile-img3.webp",
+];
+
+// Access buttons and image element
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const ImageChange = document.getElementById("Image");
-//making function for updating
+
+// Variable to store current image set and index
+let SliderImages = [];
 let index = 0;
+
+// Function to determine which images to use based on screen size
+function updateSliderImages() {
+  if (window.innerWidth <= 600) {
+    SliderImages = SliderImagesMobile;
+  } else {
+    SliderImages = SliderImagesDesktop;
+  }
+  index = 0; // Reset index to show the first image
+  ImageChange.src = SliderImages[index]; // Display the first image of the selected set
+}
+
+// Update images on initial load
+updateSliderImages();
+
+// Update images on window resize
+window.addEventListener("resize", updateSliderImages);
+
+// Slider logic
 function imageSliderNext() {
-  index++;
-  if (index === SliderImages.length) {
-    //set image to first image
-    index = 0;
-  }
+  index = (index + 1) % SliderImages.length;
   ImageChange.src = SliderImages[index];
 }
+
 function imageSliderPrev() {
-  index--;
-  if (index < 0) {
-    index = SliderImages.length - 1; //set image to last image
-  }
+  index = (index - 1 + SliderImages.length) % SliderImages.length;
   ImageChange.src = SliderImages[index];
 }
+
 nextBtn.onclick = () => {
   imageSliderNext();
 };
@@ -73,16 +95,14 @@ prevBtn.onclick = () => {
   imageSliderPrev();
 };
 
-//Slide Ride Function
-function sildeShow(){
-  let index = 0; // Start at the first image
-
+// Slideshow function
+function slideShow() {
   setInterval(() => {
-      ImageChange.src = SliderImages[index]; // Change the image source
-      index = (index + 1) % SliderImages.length; // Move to the next image, loop back to start
-  }, 3000); // Change image every 3 seconds
+    imageSliderNext();
+  }, 3000);
 }
-sildeShow();
+
+slideShow();
 
 
 //Categories sample data

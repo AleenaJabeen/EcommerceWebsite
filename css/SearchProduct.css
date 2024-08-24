@@ -169,7 +169,22 @@ body.showCart .container{
 .listCart::-webkit-scrollbar{
     width: 0;
 }
-@media (max-width:600px){
+@media (max-width:767px){
+    .cartTab{
+        width: 100vw;
+        right: -130%;
+        
+    }
+    
+    .listCart .item{
+      display: grid;
+text-align: center;
+align-items: center;
+gap:5px;
+        grid-template-columns: 55px 100px 45px 1fr;
+       
+    }
+
     
 }
 

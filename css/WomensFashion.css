@@ -161,12 +161,12 @@ svg{
 
 /* cart */
 .cartTab{
-    width: 400px;
+    width: 33%;
     background-color: white;
     color: black;
     position: fixed;
     top: 0;
-    right: -400px;
+    right: -33%;
     bottom: 0;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
@@ -250,23 +250,24 @@ body.showCart .container{
     object-fit: cover;
     
 }
-.product:hover button{
-    
-        display: inline;
-        opacity: 1;
-    
-}
 .product button{
     background-color: black;
     color: white;
     margin: 0.25rem 0;
     padding: 0.5rem;
     border: none;
+    transition: width 0.5s linear, all 0.5s ease-in;
     font-size: 1rem;
-    transition: all 0.5s ease-in both linear  and horizontal;
     display: none;
     opacity: 0;
 }
+.product:hover button{
+    transform: scale(1.1);
+        display: inline;
+        opacity: 1;
+    
+}
+
 /*view section*/
 .product {
     background-color:white;
@@ -328,7 +329,20 @@ body.showCart .container{
         border-radius: 50%;
         border: 2px solid rgb(204, 195, 195);
         }
-
+        .cartTab{
+            width: 100vw;
+            right: -130%;
+            
+        }
+        
+        .listCart .item{
+          display: grid;
+    text-align: center;
+    align-items: center;
+    gap:5px;
+            grid-template-columns: 55px 100px 45px 1fr;
+           
+        }
 
 }
 
