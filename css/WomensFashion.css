@@ -254,14 +254,10 @@ body.showCart .container{
     background-color: black;
     color: white;
     margin: 0.25rem 0;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: none;
     font-size: 1rem;
-    opacity: 0;
-}
-.product:hover button{
-        opacity: 1;
-    
+    border-radius: 20px;
 }
 
 /*view section*/
@@ -339,15 +335,6 @@ body.showCart .container{
             grid-template-columns: 55px 100px 45px 1fr;
            
         }
-        .product button{
-            background-color: black;
-            color: white;
-            margin: 0.25rem 0;
-            padding: 0.5rem;
-            border: none;
-            display: block;
-            font-size: 1rem; 
-        }
-
+     
 }
 
