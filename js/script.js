@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const SliderImagesDesktop = [
   "/images/desktop-img1.webp",
   "/images/desktop-img2.png",
-  "/images/desktop-img3.png",
+  "/images/desktop-img3.PNG",
 ];
 const SliderImagesMobile = [
   "/images/mobile-img1.webp",
