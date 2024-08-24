@@ -22,22 +22,19 @@
     object-fit: cover;
 }
 .product-item button{
-    background-color: black;
-    color: white;
+    background-color:transparent;
+    color: black;
     margin: 0.25rem 0;
     padding: 0.5rem;
-    border: none;
+    border:2px solid black;
     font-size: 1rem;
-    transition: all 0.5s ease-in both linear  and horizontal;
-    display: none;
-    opacity: 0;
 }
-.product-item:hover button{
-    
-    display: inline;
-    opacity: 1;
+.product-item button:hover{
+    background-color: black;
+    color: white;
+}
 
-}
+
 /*Cart Section*/
 
 .container{

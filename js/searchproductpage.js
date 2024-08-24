@@ -77,7 +77,9 @@ function displaySearchResults(container, results) {
   results.forEach(product => {
     const productElement = document.createElement('div');
     productElement.className = 'product-item';
-
+    productElement.addEventListener('click', (event) => {
+      viewProduct(product.id);
+      });
     productElement.innerHTML = `
       <img src="${product.image}" alt="${product.name}" />
       <h3>${product.name}</h3>
@@ -87,7 +89,7 @@ function displaySearchResults(container, results) {
 
     container.appendChild(productElement);
   });
-
+  
   container.addEventListener("click", (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains("addCart")) {
@@ -95,6 +97,7 @@ function displaySearchResults(container, results) {
       let id_product = positionClick.dataset.id;
       addToCart(id_product);
     }
+    
   });
 }
 
@@ -227,4 +230,9 @@ const getAllProducts = () => {
 
 // Get the products for the cart
 const products = getAllProducts();
+function viewProduct(id) {
+  // Redirect to the product detail page with the product ID
+  window.location.href = `/html/AddProductPage.html?id=${id}`;
+}
+// Fu
 
