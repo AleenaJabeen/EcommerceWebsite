@@ -251,13 +251,17 @@ body.showCart .container{
     
 }
 .product button{
+    background-color:transparent;
+    color: black;
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    border:2px solid black;
+    font-size: 1rem;
+   
+}
+.product button:hover{
     background-color: black;
     color: white;
-    margin: 0.25rem 0;
-    padding: 0.75rem;
-    border: none;
-    font-size: 1rem;
-    border-radius: 20px;
 }
 
 /*view section*/
