@@ -80,11 +80,11 @@
     margin: 1rem;
     justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: 1rem;
    } 
    .product-info{
     width: 90svw;
-  height: 50svh;
+  height: 60svh;
    }
    .cartTab{
     width: 100vw;
